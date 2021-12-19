@@ -23,7 +23,7 @@ namespace EncryptUsingAES
 
         private void ListViewItem_MouseDoubleClick_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Main.Content = new textEnc();
+            Main.Content = new TextEnc();
         }
     }
 

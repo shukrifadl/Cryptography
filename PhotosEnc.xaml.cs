@@ -16,7 +16,7 @@ namespace EncryptUsingAES
     {
         public PhotosEnc()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -109,16 +109,23 @@ namespace EncryptUsingAES
                     0 => CipherMode.ECB,
                     1 => CipherMode.CBC,
                     _ => throw new Exception("un Vaild!"),
-                };
+                };            
+                if(IsInitialized){
+                    modeDec.SelectedIndex = Crypt.mode ==CipherMode.ECB ? 0 : 1;
+                    modeEnc.SelectedIndex = Crypt.mode == CipherMode.ECB ? 0 : 1;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
-            }
+            }        
         }
 
         #region Image Covert
+        /// <summary>
+        /// convert image for a form to deal with cryptography 
+        /// </summary>
+        
         public static BitmapImage ToImage(byte[] array)
         {
             using MemoryStream ms = new(array);

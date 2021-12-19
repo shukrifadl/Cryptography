@@ -8,9 +8,9 @@ namespace EncryptUsingAES
     /// <summary>
     /// Interaction logic for textEnc.xaml
     /// </summary>
-    public partial class textEnc : Page
+    public partial class TextEnc : Page
     {
-        public textEnc()
+        public TextEnc()
         {
             InitializeComponent();
         }

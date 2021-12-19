@@ -20,7 +20,7 @@
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="1*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" x:Name="picEnc"                     />
+            <Image Grid.Row="0" x:Name="picEnc" />
             <ComboBox Name="modeEnc"
                    Grid.Row="1" 
                     SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0"                 
