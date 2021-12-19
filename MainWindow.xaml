@@ -1,0 +1,46 @@
+﻿<Window x:Class="EncryptUsingAES.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EncryptUsingAES"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720.4" Width="1080" Background="#FF00B6A5" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" ></ColumnDefinition>
+            <ColumnDefinition  Width="6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="sidePanel" Grid.Column="0"
+              Background="#FF0F4E7A" >
+            <StackPanel>
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                          FontFamily="Century Gothic" FontSize="14"
+                          Foreground="White" BorderBrush="Transparent" 
+                          Background="Transparent" FontWeight="Bold">
+                    <ListViewItem Height="30"   MouseDoubleClick="ListViewItem_MouseDoubleClick">
+                        <StackPanel Orientation="Horizontal" >
+                            <Image Source="icons/image.ico" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="15 0 0 0" Text="Images" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30" MouseDoubleClick="ListViewItem_MouseDoubleClick_1">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="icons/text.ico" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="15 0 0 0" Text="Text" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
+
+
+        <Frame Grid.Column="1" x:Name="Main" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="24,24,24,24"  />
+
+
+
+    </Grid>
+
+</Window>
