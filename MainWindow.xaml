@@ -1,0 +1,41 @@
+﻿<Window x:Class="EncryptUsingAES.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EncryptUsingAES"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720.4" Width="1080" Background="#FF00B6A5" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <StackPanel Width="500" HorizontalAlignment="Left" VerticalAlignment="Top" Height="350"  >
+            <Image x:Name="picEnc" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Width="250" Height="250" MinWidth="250" MinHeight="250" MaxWidth="500" MaxHeight="500"  />
+            <ComboBox Name="modeEnc" Height="40" Width="150" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem>ECB</ComboBoxItem>
+                <ComboBoxItem>CBC</ComboBoxItem>
+                <ComboBoxItem>CTS</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="clickEnc"  Click="Button_Click" Width="150" Height="50" MinWidth="150" MinHeight="50" MaxWidth="250" MaxHeight="75" HorizontalAlignment="Center" VerticalAlignment="Center" >Choose Photo to Encrypt</Button>
+                    </StackPanel >
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Width="500" Height="350">
+            <Image x:Name="picDec" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="5" Grid.ColumnSpan="5" Width="250" Height="250" MinWidth="250" MinHeight="250" MaxWidth="500" MaxHeight="500"  />
+            <ComboBox Name="modeDec" Height="40" Width="150" >
+                <ComboBoxItem>ECB</ComboBoxItem>
+                <ComboBoxItem>CBC</ComboBoxItem>
+                <ComboBoxItem>CTS</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="clickDec" Width="150" Height="50" MinWidth="150" MinHeight="50" MaxWidth="250" MaxHeight="75" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnDec_Click" >Choose Photo Decrypt</Button>
+       
+        </StackPanel>
+        
+        
+        <StackPanel Width="300"  Orientation="Vertical" Grid.Column="2" Grid.ColumnSpan="2" Margin="24,24,24,24" VerticalAlignment="Bottom" HorizontalAlignment="Center"  >
+
+            <TextBox x:Name="plainText" Height="50"  Margin="0,24,0,24" />
+            <Button x:Name="btn_Encrypt" Height="50" Click="Encrypt_txt_Click">Encrypt</Button>
+            <TextBox x:Name="CipherText" Height="50" Margin="0,24,0,24" />
+            <Button x:Name="btn_Decrypt"  Height="50" Click="Decrypt_txt_Click">Decrypt</Button>
+        </StackPanel>
+
+    </Grid>
+
+</Window>
